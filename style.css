@@ -93,4 +93,9 @@ p {
     width: 239px; 
     height: 64px;
     border: none;
+    cursor: pointer;
+}
+
+.button-right:hover{
+    opacity: 0.6;
 }
