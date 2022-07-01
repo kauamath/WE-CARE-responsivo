@@ -5,6 +5,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+}
 header {
     margin: 44px 0 0 76px;
 }
@@ -34,25 +38,31 @@ a {
 }
 
 .button-header:hover {
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .button-header:active {
-    background-color: #5AE1;
+    opacity: 0.8;
 }
 
 .section-left {
-    margin: 144px 86px 0 125px;
+    margin: 144px 0 0 125px;
     display: inline-block;
+    min-width: 280px;
+    max-width: 1500px;
 }
 
 img {
     max-width: 568px;
     max-height: 500px;
+    width: 100%;
 }
 
 .section-right {
     display: inline-block;
+    margin: 0 0 0 86px;
+    min-width: 280px;
+    max-width: 1500px;
 }
 
 h1 {
@@ -62,7 +72,8 @@ h1 {
     color: #515151;
     width: 513px;
     height: 122px;
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
+    text-align: center;
 }
 
 h2 {
@@ -70,7 +81,8 @@ h2 {
     font-size: 58px;
     line-height: 71px;
     color: #515151;
-    margin: 0 0 30px 0;
+    margin: 0 0 32px 0;
+    text-align: center;
 }
 
 p {
@@ -80,7 +92,7 @@ p {
     color: #848484;
     width: 515px;
     height: 87px;
-    margin: 0 0 50px 0;
+    margin: 0 0 65px 0;
 }
 
 .button-right {
@@ -90,12 +102,93 @@ p {
     color: #000000;
     background: #ADFF00;
     border-radius: 20.5px;
-    width: 239px; 
+    width: 239px;
     height: 64px;
     border: none;
     cursor: pointer;
 }
 
-.button-right:hover{
+.button-right:hover {
     opacity: 0.6;
+}
+
+/* Primeira Quebra */
+@media screen and (max-width:1310px) {
+    .section-left {
+        margin: 10% 0 0 0;
+    }
+
+    .section-right{
+        margin-left: 10px;
+    }
+}
+
+/* Segunda Quebra */
+@media screen and (max-width:1110px) {
+    header {
+        display: none;
+    }
+
+    p {
+        display: none;
+    }
+
+    .section-left {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+
+    img {
+        margin: auto;
+        margin-top: 149px;
+        display: block;
+        max-width: 354px;
+        max-height: 317px;
+
+    }
+
+    .section-right {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+
+    h1 {
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 61px;
+        color: #515151;
+        display: block;
+        margin: auto;
+        margin-top: 24px;
+        width: auto;
+        height: auto;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 37px;
+        color: #515151;
+        display: block;
+        margin: auto;
+        width: auto;
+        margin-top: 7px;
+    }
+
+    .button-right {
+        background: #ADFF00;
+        border-radius: 20.5px;
+        display: block;
+        margin: auto;
+        margin-top: 17px;
+    }
+}
+
+/* Terceira Quebra */
+@media screen and (max-width:375px) {
+    img {
+        margin-top: 100px;
+    }
 }
